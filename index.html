@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bowling Alley</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script
+    src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+  <script src="./bowling.js"></script>
+  <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+
+
+</head>
+
+<body>
+  <a-scene id="scene">
+
+    <!--Assets-->
+
+
+    <!--Light-->
+    <a-entity light="type: ambient; color: lightblue; intensity:0.5"></a-entity>
+
+    <!--Camera and Cursor-->
+    <a-entity id="camera" camera position="0 2g 0" wasd-controls look-controls="pointerLockEnabled: false"
+      mouse-cursor>
+
+      <a-cursor></a-cursor>
+    </a-entity>
+
+    <!--Bowl-->
+    <a-entity bowl></a-entity>
+
+    <!--Ground-->
+    <a-plane id="ground" repeat="5 5" position="0 1 0" rotation="-90 0 0" height="200" width="200" color="#FBF2D4"
+      static-body visible="true">
+    </a-plane>
+
+    <!--Pins-->
+    <a-box id="pin1" position="0 1.5 -10" color="tomato" depth="1" height="1" width="1w" dynamic-body></a-box>
+    <a-box id="pin2" position="-1.1 1.5 -11" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin3" position="1.1 1.5 -11" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin4" position="-2.2 1.5 -12" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin5" position="2.2 1.5 -12" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin6" position="0 1.5 -12" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin7" position="-3.3 1.5 -13" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin8" position="-1.1 1.5 -13" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin9" position="1.1 1.5 -13" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+    <a-box id="pin10" position="3.3w 1.5 -13" color="tomato" depth="1" height="1" width="1" dynamic-body></a-box>
+  </a-scene>
+</body>
+
+</html>
